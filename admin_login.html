@@ -16,7 +16,7 @@
                 // Send data to Django API endpoint
                 $.ajax({
                     type: "POST",
-                    url: "{% url 'admin_auth' %}",  // Change this URL to your Django API endpoint
+                    url: "https://075e-103-203-72-32.ngrok-free.app/admin_auth/",  // Change this URL to your Django API endpoint
                     data: JSON.stringify({"username": username, "password": password}),
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -46,3 +46,5 @@
     </form>
 </body>
 </html>
+
+

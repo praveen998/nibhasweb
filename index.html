@@ -11,7 +11,15 @@
 <body>
     <h1>Welcome to nibhaskids!</h1>
     <p>This is a sample index file.</p>
-    <button><a href="https://7227-103-203-72-100.ngrok-free.app/admin_login/">login to admin </a></button>
+    <button id="loginid">login to admin </button>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#loginid").click(function(){
+                window.location.href = "admin_login.html";
+            });
+        });
+    </script>
 </body>
 
 </html>

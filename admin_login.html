@@ -32,9 +32,10 @@
                     processData: false,
                     contentType: false,
                     success: function(response) {
-                        alert('successfully login')
+                        alert('success')
                         window.location.href = "https://praveen998.github.io/nibhasweb/adminpanel.html";
                     },
+
                     error: function(xhr, status, error) {
                         alert('failed to login')
                         console.error(xhr.responseText);

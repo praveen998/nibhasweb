@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" id="submitBtn" value="Submit"> <!-- Change type to "submit" -->
+    </form>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#loginForm').submit(function(event){
+                event.preventDefault();
+                var formData = new FormData(); // Corrected initialization
+                formData.append('username', $('#username').val());
+                formData.append('password', $('#password').val());
+                $.ajax({
+                    type: "POST",
+                    url: "http://127.0.0.1:8080/admin_auth/",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        window.location.href = "adminpanel.html";
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                    },
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

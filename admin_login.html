@@ -32,7 +32,10 @@
                     contentType: false,
                     success: function(response) {
                         var jsonResponse = JSON.stringify(response);
-                        alert(JSON.stringify(response['success']))
+                        var responseObject = JSON.parse(jsonResponse);
+                        var successValue = responseObject.name;
+                        document.cookie = "name=" + encodeURIComponent(successValue);
+                        alert(successValue);
                         window.location.href = "https://praveen998.github.io/nibhasweb/adminpanel.html";
                     },
 

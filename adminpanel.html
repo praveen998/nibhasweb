@@ -9,7 +9,7 @@
 <body>
 <button id="open-modal">add pattern Form</button>
 <button id="open-modal1">add normal Form</button>
-
+<button id="logout">logout</button>
 <!-- Hidden popup form -->
 
 <div id="popup-form1" class="modal">
@@ -163,6 +163,20 @@ $(document).ready(function(){
                 console.error(xhr.responseText);
             }
         });
+        $("#logout").click(function(){
+
+        $.ajax({
+            type:GET,
+            url:"https://4047-103-203-73-55.ngrok-free.app/logout/",
+            dataType: "json",
+            success: function(response) {
+            // Handle successful response
+            window.location.href="https://praveen998.github.io/nibhasweb/adminlogin.html"
+        
+        },
+        });
+
+      })
     });
 
 </script>

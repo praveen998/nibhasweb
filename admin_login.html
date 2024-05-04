@@ -33,7 +33,6 @@
                     success: function(response) {
                         var jsonResponse = JSON.stringify(response);
                         alert(JSON.stringify(response['success']))
-                        document.cookie = "response=" + encodeURIComponent(jsonResponse['name']);
                         window.location.href = "https://praveen998.github.io/nibhasweb/adminpanel.html";
                     },
 

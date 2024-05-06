@@ -26,7 +26,7 @@
                 formData.append('password', $('#password').val());
                 $.ajax({
                     type: "POST",
-                    url: "https://4047-103-203-73-55.ngrok-free.app/admin_auth/",
+                    url: "https://c984-103-203-73-21.ngrok-free.app/admin_auth/",
                     data: formData,
                     processData: false,
                     contentType: false,
@@ -36,7 +36,7 @@
                         var successValue = responseObject.name;
                         document.cookie = "name=" + encodeURIComponent(successValue);
                         alert(successValue);
-                        window.location.href = "https://praveen998.github.io/nibhasweb/admin_login.html";
+                        window.location.href = "https://praveen998.github.io/nibhasweb/adminpanel.html";
                     },
 
                     error: function(xhr, status, error) {

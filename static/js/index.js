@@ -17,9 +17,8 @@ $(document).ready(function()
             },
    
         });
-       
-       
     });
+    
 //function end -------------------------------------------------------------------
     $("#loginid").click(function(){
         window.location.href = "admin_login.html";

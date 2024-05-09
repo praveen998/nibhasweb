@@ -28,7 +28,7 @@ $(document).ready(function()
         var inputvalue= $(this).val();
         $.ajax({
             type:"POST",
-            url:"https://f110-103-203-73-180.ngrok-free.app/checktext/",
+            url:"https://7bd1-103-203-73-180.ngrok-free.app/checktext/",
             data:{
                 q: inputvalue    
             },
@@ -49,7 +49,7 @@ $(document).ready(function()
     $("#question").click(function(){
         $.ajax({
             type:"GET",
-            url:"https://f110-103-203-73-180.ngrok-free.app/question",
+            url:"https://7bd1-103-203-73-180.ngrok-free.app/question",
             success:function(response){
                 var jsonResponse = JSON.stringify(response);
                 var responseObject = JSON.parse(jsonResponse);

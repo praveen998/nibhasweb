@@ -18,8 +18,6 @@
         <input type="text" id="n_question_name" name="n_question_name" required><br><br>
         <label for="n_question">question:</label>
         <input type="text" id="n_question" name="n_question" required><br><br>
-        <label for="n_age">age:</label>
-        <input type="number" id="n_age" name="n_age" required><br><br>
         <label for="n_a">option A:</label>
         <input type="text" name="n_a" id ="n_a" required><br><br>
         <label for="n_b">option B:</label>
@@ -45,8 +43,6 @@
         <input type="text" id="question_name" name="question_name" required><br><br>
         <label for="question">question:</label>
         <input type="text" id="question" name="question" required><br><br>
-        <label for="age">age:</label>
-        <input type="number" id="age" name="age" required><br><br>
         <label for="question">question_image:</label>
         <input type="file" name="question_image" id ="question_image" required><br><br>
         <label for="a">option A:</label>
@@ -87,7 +83,6 @@ $(document).ready(function(){
         var formData = new FormData();
         formData.append('question_name', $('#question_name').val());
         formData.append('question', $('#question').val());
-        formData.append('age', $('#age').val());
         formData.append('question_image', $('#question_image')[0].files[0]);
         formData.append('a', $('#a')[0].files[0]);
         formData.append('b', $('#b')[0].files[0]);
@@ -98,7 +93,7 @@ $(document).ready(function(){
         // Perform AJAX request to submit form data
         $.ajax({
             type: "POST",
-            url: "https://8fbb-103-203-73-21.ngrok-free.app/add_pattern/", // Replace with the actual URL to submit form data
+            url: "https://f110-103-203-73-180.ngrok-free.app/add_pattern/", // Replace with the actual URL to submit form data
             data: formData,
             processData: false, // Prevent jQuery from automatically processing the data
             contentType: false, 
@@ -141,7 +136,7 @@ $(document).ready(function(){
         // Perform AJAX request to submit form data
         $.ajax({
             type: "POST",
-            url: "https://8fbb-103-203-73-21.ngrok-free.app/add_normal/", // Replace with the actual URL to submit form data
+            url: "https://f110-103-203-73-180.ngrok-free.app/add_normal/", // Replace with the actual URL to submit form data
             data: formData,
             processData: false, // Prevent jQuery from automatically processing the data
             contentType: false, 
@@ -165,7 +160,7 @@ $(document).ready(function(){
 
         $.ajax({
             type:GET,
-            url:"https://8fbb-103-203-73-21.ngrok-free.app/logout/",
+            url:"https://f110-103-203-73-180.ngrok-free.app/logout/",
             dataType: "json",
             success: function(response) {
             // Handle successful response
